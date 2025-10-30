@@ -1,4 +1,4 @@
-![Beutiful Minecraft pixals](/../practice/image.html/Minecraft.jpg)
+![Beutiful Minecraft pixals](../practice/image.html/Minecraft.jpg)
 
 This is my code for the hexdecimal image.
 0A
