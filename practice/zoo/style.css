@@ -1,0 +1,24 @@
+
+table, th, tr, td{
+	border: 1px solid blue;
+	border-collapse: collapse;
+}
+body{
+	background-color: #88FE88;
+}
+h1{
+	background-color: #FF2800;
+}
+
+#info{
+	background-color: #334455;
+}
+
+.highlight{
+	background-color: #111F11;
+}
+
+#animals{
+	text-decoration: underline;
+	text-decoration-style: wavy;
+}
