@@ -7,25 +7,57 @@
 body{
 	background-color: lavender;
 }
+
+</style>
 	</head>
 	<body>
 		<form action="https://httpbin.org/post" method="post">
 			What is your name?
 			<input type="text" name="yourname">
+			<br>
 			What is your email address?
 			<input type="text" name="yourname">
+			<br>
 			What is your phone number?
 			<input type="text" name="yourname">
+			<br>
 			How many people will you bring with you to the party?
 			<input type="text" name="yourname">
+			<br>
 			What is your favorite flavor of ice cream?
+			<label for="vanilla">Vanilla</label>
 			<input type="radio" name="Vanilla">
+			<label for="chocolate">Chocolate</label>
 			<input type="radio" name="Chocolate">
+			<label for="strawberry">Strawberry</label>
 			<input type="radio" name="Strawberry">
+			<label for="other">Other</label>
 			<input type="radio" name="Other">
+			<br>
 			Which toppings do you like?
-
-
+			<label for="sprinkles">Sprinkles</label>
+			<input type="checkbox" name="Sprinkles">
+			<label for="crushed oreos">Crushed Oreos</label>
+			<input type="checkbox" name="Crushed Oreos">
+			<label for=""></label>
+			<input type="checkbox" name="Whipped Cream">
+			<label for=""></label>
+			<input type="checkbox" name="Gummy Bears">
+			<label for=""></label>
+			<input type="checkbox" name="Other">
+			<br>
+			What kind of entertainment should we have at the party?
+		<label for="myDropdown">Choose an option:</label>
+		<select name="myDropdown" id="myDropdown">
+                	<option value="option1">DJ</option>
+                	<option value="option2" Selected>Cornhole</option>
+			<option value="option3">Bounce House</option>
+			<option value="option4">Magician</option>
+		</select>
+		<br>
+			Do you have any other suggestions or comments?
+			<input type="text" name="yourname">
+<br>
 			<button type="submit">Submit</button>
 		</form>
 	</body>
