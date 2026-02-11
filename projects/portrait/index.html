@@ -2,8 +2,36 @@
 <html lang="en">
 	<head>
 		<title>Self Portrait Project</title>
+<style>
+canvas{
+	border: black 1px solid;
+}
+</style>
 	</head>
 	<body>
+	<h1>This is My Beautiful Self-Portrait</h1>
+	<canvas id="canvas" width="800" height="800">
+	</canvas>
+	<script>
+	const canvas = document.getElementById("canvas");
+	const ctx = canvas.getContext("2d");
+	
+	//Rectangular background
+	ctx.fillStyle = "#F2EFEA";
+	ctx.fillRect(0,0,800,800);
 
+	//Box for my shirt
+	ctx.fillStyle = "#1B263B";
+	ctx.fillRect(250,400,300,400);
+
+	//My Head
+
+
+
+
+
+
+
+	</script>
 	</body>
 </html>
