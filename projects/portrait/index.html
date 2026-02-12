@@ -20,13 +20,36 @@ canvas{
 	ctx.fillStyle = "#F2EFEA";
 	ctx.fillRect(0,0,800,800);
 
-	//Box for my shirt
+	//Body for my shirt
 	ctx.fillStyle = "#1B263B";
-	ctx.fillRect(250,400,300,400);
+	ctx.beginPath();
+	ctx.moveTo(250,330);
+	ctx.lineTo(250,800);
+	ctx.lineTo(550,800);
+	ctx.lineTo(550,330);
+	ctx.lineTo(500,280);
+	ctx.lineTo(300,280);
+	ctx.lineTo(250,330);
+	ctx.fill();
+	//Left Shoulder
+	ctx.beginPath();
+	ctx.arc(280,310,30,2/4*Math.PI,0);
+	ctx.fill();
+	//Right Shoulder
+	ctx.beginPath();
+	ctx.arc(520,310,30,Math.PI,2/4);
+	ctx.fill();
 
 	//My Head
-
-
+	ctx.fillStyle = "#C8B3AB";
+	ctx.strokeStyle = "#808080";
+	ctx.lineWidth = 4;
+	ctx.beginPath();
+	ctx.arc(400,250,100,0,2*Math.PI);
+	ctx.fill();
+	ctx.stroke();
+	
+	//My Face
 
 
 
