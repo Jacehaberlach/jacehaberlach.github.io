@@ -48,6 +48,48 @@ canvas{
 	ctx.arc(400,250,100,0,2*Math.PI);
 	ctx.fill();
 	ctx.stroke();
+
+	//Spiky Hair
+	ctx.fillStyle = "#6B4423";
+	ctx.strokeStyle = "#4E3414";
+	ctx.lineWidth = 2;
+
+	// Spike 1
+	ctx.beginPath();
+	ctx.moveTo(320,150);
+	ctx.lineTo(340,100);
+	ctx.lineTo(360,150);
+	ctx.closePath();
+	ctx.fill();
+	ctx.stroke();
+
+	// Spike 2
+	ctx.beginPath();
+	ctx.moveTo(360,150);
+	ctx.lineTo(380,90);
+	ctx.lineTo(400,150);
+	ctx.closePath();
+	ctx.fill();
+	ctx.stroke();
+
+	// Spike 3
+	ctx.beginPath();
+	ctx.moveTo(400,150);
+	ctx.lineTo(420,100);
+	ctx.lineTo(440,150);
+	ctx.closePath();
+	ctx.fill();
+	ctx.stroke();
+
+	// Spike 4
+	ctx.beginPath();
+	ctx.moveTo(440,150);
+	ctx.lineTo(460,110);
+	ctx.lineTo(480,150);
+	ctx.closePath();
+	ctx.fill();
+	ctx.stroke();
+
 	
 	//My Face
 
@@ -59,27 +101,70 @@ canvas{
 	ctx.stroke();
 	//Nose
 	ctx.beginPath();
-	ctx.arc(400, 270, 12, 0, Math.PI); // centered with face
+	ctx.arc(400,270,12,0,Math.PI); // centered with face
 	ctx.strokeStyle = "#7A4436";
 	ctx.lineWidth = 3;
 	ctx.stroke();
+	
+	//Ears
+
+	ctx.fillStyle = "#C8B3AB";   // same skin color
+	ctx.strokeStyle = "#808080";
+	ctx.lineWidth = 4;
+
+	// Left ear
+	ctx.beginPath();
+	ctx.arc(300,250,15,0,2*Math.PI);
+	ctx.fill();
+	ctx.stroke();
+
+	// Right ear
+	ctx.beginPath();
+	ctx.arc(500,250,15,0,2*Math.PI);
+	ctx.fill();
+	ctx.stroke();
+
 	//Eyes
 	
 	// Left Eye
 	ctx.beginPath();
-	ctx.arc(360, 220, 15, 0, 2 * Math.PI);
+	ctx.arc(360,220,15,0,2*Math.PI);
 	ctx.fillStyle = "white";
 	ctx.fill();
 	ctx.stroke();
 
 	// Right Eye
 	ctx.beginPath();
-	ctx.arc(440, 220, 15, 0, 2 * Math.PI);
+	ctx.arc(440,220,15,0,2*Math.PI);
 	ctx.fillStyle = "white";
 	ctx.fill();
 	ctx.stroke();
+	
+	// Pupils
+	ctx.beginPath();
+	ctx.arc(360,220,7,0,2*Math.PI);
+	ctx.fillStyle = "black";
+	ctx.fill();
 
+	ctx.beginPath();
+	ctx.arc(440,220,7,0,2*Math.PI);
+	ctx.fillStyle = "black";
+	ctx.fill();
+	
+	// Arm Slits
 
+	ctx.strokeStyle = "black";
+	ctx.lineWidth = 3;
+
+	// Left slit
+	ctx.beginPath();
+	ctx.arc(280,390,20,0.5*Math.PI,1.5*Math.PI);
+	ctx.stroke();
+
+	// Right slit
+	ctx.beginPath();
+	ctx.arc(520,390,20,1.5*Math.PI,0.5*Math.PI);
+	ctx.stroke();
 
 
 
