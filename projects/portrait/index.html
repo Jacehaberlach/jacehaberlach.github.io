@@ -51,6 +51,34 @@ canvas{
 	
 	//My Face
 
+	//Smile
+	ctx.beginPath();
+	ctx.arc(400,300,40,0,Math.PI);
+	ctx.strokeStyle = "#A56A5F";
+	ctx.lineWidth = 5;
+	ctx.stroke();
+	//Nose
+	ctx.beginPath();
+	ctx.arc(400, 270, 12, 0, Math.PI); // centered with face
+	ctx.strokeStyle = "#7A4436";
+	ctx.lineWidth = 3;
+	ctx.stroke();
+	//Eyes
+	
+	// Left Eye
+	ctx.beginPath();
+	ctx.arc(360, 220, 15, 0, 2 * Math.PI);
+	ctx.fillStyle = "white";
+	ctx.fill();
+	ctx.stroke();
+
+	// Right Eye
+	ctx.beginPath();
+	ctx.arc(440, 220, 15, 0, 2 * Math.PI);
+	ctx.fillStyle = "white";
+	ctx.fill();
+	ctx.stroke();
+
 
 
 
