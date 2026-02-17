@@ -7,7 +7,31 @@
 	<body>
 		<h1>Here Be Functions</h1>
 		<script>
-		console.log("test");
+		console.log("test"); //calling or executing
+		
+		//defining a function
+		function sayHi(){
+			console.log("hi");
+		}
+
+		//call/execute the function
+		sayHi();
+
+		//functions can take parameters
+		// just like f(x)
+		function sayHiToSomeone(who){
+			console.log("hi "+who);
+		}
+
+		//call the function
+		sayHiToSomeone("Patrick");
+		sayHiToSomeone("Chris");
+
+		//functions can have many parameters
+		//g(x,y)
+		function sayHiToTwoPeople(thing1, thing2){
+			console.log("hi "+ thing1 + "and" + thing2);
+		}
 		</script>
 	</body>
 </html>
