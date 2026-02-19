@@ -4,8 +4,24 @@
 		<title>Animation</title>
 	</head>
 	<body>
+		<canvas id="myCanvas"
+			width=800
+			height=800>
+		</canvas>
 		<script>
-			console.log("hi");
+		const canvas = document
+			.getElementById("myCanvas");
+		const ctx = canvas.getContext("2d");
+		let x = 1;
+
+		function animate(){
+			x = x + 1;
+			ctx.clearRect(0,0,800,800);
+			ctx.fillRect(x,100,100,100);
+			requestAnimationFrame(animate);
+		}
+
+		animate();
 		</script>
 	</body>
 </html>
