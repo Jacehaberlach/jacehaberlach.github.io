@@ -2,8 +2,14 @@
 <html lang="en">
 	<head>
 		<title>Animation</title>
+<style>
+canvas{
+	border: 1px black solid;
+}
+</style>
 	</head>
 	<body>
+		<h1>Animations!!!!:</h1>
 		<canvas id="myCanvas"
 			width=800
 			height=800>
@@ -13,15 +19,28 @@
 			.getElementById("myCanvas");
 		const ctx = canvas.getContext("2d");
 		let x = 1;
-
+		let x2 = 1;
+		let dx = 10;
+		let dx2 = 12;
 		function animate(){
-			x = x + 1;
+			x = x + dx;
+			x2 = x2 + dx2;
+			if(x > 800 || x < 0){
+				dx = dx * -1;
+			}
+			if(x2 > 800 || x2 < 0){
+				dx2 = dx2 * -1;
+			}
 			ctx.clearRect(0,0,800,800);
-			ctx.fillRect(x,100,100,100);
+			ctx.fillStyle = "Blue";
+			ctx.fillRect(x,100,10,10);
+			ctx.fillStyle = "Red";
+			ctx.fillRect(x2,200,10,10);
 			requestAnimationFrame(animate);
 		}
-
+		
 		animate();
+
 		</script>
 	</body>
 </html>
