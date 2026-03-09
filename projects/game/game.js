@@ -8,18 +8,18 @@ let gameActive = true; //this variable is required.
 
 
 //Make one function for each location
-function locationA() {
+function SkyHub() {
     clear();
-    print("\nYou are in location A!");
+    print("\nWelcome to the SkyCraft Hub!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationB");
+        "\n\tBlackSmith");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationb") {
-            locationB();
+        if (input.toLowerCase() === "blacksmith") {
+            BlackSmith();
         } else {
             stayHere();
-            waitThenCall(locationA);
+            waitThenCall(SkyHub);
         }
     }
     waitForInput(processInput);
@@ -55,9 +55,3 @@ function start(){
 }
 
 
-const bgMusic = new Audio("1-08.\ Minecraft.mp3");
-
-bgMusic.loop = true;
-bgMusic.volume = 0.5;
-
-bgMusic.play();
