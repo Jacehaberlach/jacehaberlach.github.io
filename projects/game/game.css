@@ -1,9 +1,9 @@
 body {
     margin: 0;
     padding: 20px;
-    background-color: #1e1e1e;
+    background-color: #6EC1FF;
     font-family: 'Courier New', monospace;
-    color: #00ff00;
+    color: #EAF6FF;
     height: 100vh;
     box-sizing: border-box;
 }
@@ -24,9 +24,9 @@ h1{
     flex-direction: column;
     max-width: 80%;
     margin: 0 auto;
-    border: 2px solid #00ff00;
+    border: 10px solid #7ED957;
     padding: 20px;
-    background-color: #000;
+    background-color: #6B3E1E;
     overflow: hidden;
 }
 

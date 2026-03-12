@@ -2,7 +2,7 @@ let gameActive = true; //this variable is required.
                        //to stop the game, set it to false.
 
 //Declare your other global variables here
-
+let inventory = 0;
 
 //If you need, add any "helper" functions here
 
@@ -17,8 +17,7 @@ function SkyHub() {
     function processInput(input){
         if (input.toLowerCase() === "blacksmith") {
             BlackSmith();
-	} else if {
-		(input.toLowerCase() === "museum") {
+	} else if (input.toLowerCase() === "museum") {
 		Museum();
         } else {
             stayHere();
@@ -37,8 +36,7 @@ function BlackSmith() {
     function processInput(input){
         if (input.toLowerCase() === "skyhub") {
             SkyHub();
-	} else if {
-		(input.toLowerCase() === "mines") {
+	} else if (input.toLowerCase() === "mines") {
 		Mines();
         } else {
             stayHere();
@@ -50,9 +48,8 @@ function BlackSmith() {
 
 function Museum() {
 	clear();
-	print("\nWelcome to the Museum I advise you to not be in here unless you have the Zombie Head or else I will kill you!");
-	print("\nGo back to the Hub or Else..." + 
-	"\n\tSkyHub");
+	print("\nWhat are you doing in the Museum I advise you to not be in here unless you have the Zombie Head");
+	print("\nGo back to the Hub or else I will kill you!" + "\n\tSkyHub");
 
 	function processInput(input){
 	if (input.toLowerCase() === "skyhub") {

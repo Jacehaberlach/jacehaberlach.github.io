@@ -36,7 +36,7 @@ function clear() {
 document.getElementById('user-input').addEventListener('keypress', function(e) {
     if (e.key === 'Enter' && gameActive) {
         const input = this.value.trim();
-        this.value = '';
+        this.value = 'Enter';
         print('> ' + input);
         handleInput(input);
     }
