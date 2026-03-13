@@ -36,7 +36,7 @@ function clear() {
 document.getElementById('user-input').addEventListener('keypress', function(e) {
     if (e.key === 'Enter' && gameActive) {
         const input = this.value.trim();
-        this.value = 'Enter';
+        this.value = '';
         print('> ' + input);
         handleInput(input);
     }
@@ -60,8 +60,4 @@ function waitThenCall(target){
 function stayHere(){
     print("\nsorry, I don't understand your input. I'll assume you " +
         "want to stay here");
-}
-
-function killUser(){
-	start();
 }
