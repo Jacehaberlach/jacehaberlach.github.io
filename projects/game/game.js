@@ -3,7 +3,7 @@ let gameActive = true; //this variable is required.
 
 //Declare your other global variables here
 let inventory = 0;
-
+let gotWeapons = false;
 //If you need, add any "helper" functions here
 function killUser(){
 	clear();
@@ -13,10 +13,11 @@ function killUser(){
 	waitThenCall(start);
 }
 
+	
 //Start of the game
 function start(){
     clear();
-    print("Welcome to SkyCraft! Press any key to start");
+    print("Welcome to SkyCraft! Press any enter to start");
 
     function processInput(input){
         SkyHub();
@@ -47,8 +48,14 @@ function SkyHub() {
 
 function BlackSmith() {
     clear();
+
+    if (!gotWeapons) {
+        inventory += 5;
+        gotWeapons = true;
+    }
+
     print("\nYou are now in the BlackSmith Shop!");
-    print("\nYou have been awarded with weapons fellow traveller.");
+    print("\nYou have been awarded with weapons that are worth five points fellow traveller.");
     print("\nNow go, for the Head of Zombies awaits you!");
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\tSkyHub" + "\n\tMines");
@@ -87,6 +94,68 @@ function processInput(input){
     }
 
 	    waitForInput(processInput);
+}
+
+function Forest() {
+	clear();
+
+	print("\nYou have entered the Forest of Lost Souls.");
+	print("\nGhostly figures surround you.");
+	print("\n\tContinue");
+	print("\n\tRun");
+
+function processInput(input){
+        if (input.toLowerCase() === "continue") {
+
+            if (inventory >= 5) {
+                print("\nYour weapons glow with power.");
+                print("\nThe lost souls retreat from you.");
+                print("\nYou survive the forest!");
+
+		print("\nYou have found the Head of Zombies!");
+                inventory += 20;
+		
+		print("\nA hidden passage opens in the trees...");
+		print("\n\tPassage");
+        	print("\n\tRun");
+            } else {
+                print("\nThe lost souls attack you!");
+                waitThenCall(killUser);
+            }
+
+        } else if (input.toLowerCase() === "run") {
+            Mines();
+	} else if (input.toLowerCase() === "passage" && inventory >= 20) {
+            SecretPassage();
+        } else {
+            stayHere();
+            waitThenCall(Forest);
+        }
+    }
+
+    waitForInput(processInput);
+}
+
+function SecretPassage() {
+    clear();
+    print("\nYou enter the secret passage hidden in the forest...");
+    print("\nIt leads toward the ancient museum.");
+
+    print("\n\tMuseum");
+    print("\n\tForest");
+
+    function processInput(input){
+        if (input.toLowerCase() === "museum"){
+            Museum();
+        } else if (input.toLowerCase() === "forest"){
+            Forest();
+        } else {
+            stayHere();
+            waitThenCall(SecretPassage);
+        }
+    }
+
+    waitForInput(processInput);
 }
 
 function Museum() {
