@@ -160,21 +160,38 @@ function SecretPassage() {
 
 function Museum() {
 	clear();
-	print("\nWhat are you doing in the Museum?");
-	print("\nI advise you to not be in here unless you have the Zombie Head.");
-	print("\nI suggest you go back to the Hub or else I will kill you!");
-	print("\n\tSkyHub");
+	print("\nYou enter the ancient Museum...");
+
+	if (inventory >= 25){
+	print("\nThe Museum Guardian appears!");
+        print("\nIt sees the Zombie Head in your possession.");
+        print("\nIt roars and prepares to attack!");
+
+        print("\n\tFight");
+        print("\n\tRun");
 
 	function processInput(input){
-	if (input.toLowerCase() === "skyhub") {
-		SkyHub();
+
+            if (input.toLowerCase() === "fight") {
+                BossFight();
+            } else if (input.toLowerCase() === "run") {
+                SecretPassage();
+            } else {
+                stayHere();
+                waitThenCall(Museum);
+            }
+
+        }
+
+        waitForInput(processInput);
+
 	} else {
-		print("\nThe Museum Guardian becomes furious...");
-		print("\nYou ignored the warning.");
+
+	print("\nThe Museum Guardian stares at you.");
+        print("\n'You dare enter without the Zombie Head?!'");
+        print("\nThe Guardian destroys you.");
 		waitThenCall(killUser);
 	}
-	}
-		waitForInput(processInput);
 }
 
 start();
