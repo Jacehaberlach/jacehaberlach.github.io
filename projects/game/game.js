@@ -194,4 +194,44 @@ function Museum() {
 	}
 }
 
+function BossFight(){
+	clear();
+
+	print("\nBOSS FIGHT");
+	print("\nThe Museum Guardian charges toward you!");
+	print("\nYour weapons glow with power.");
+
+	print("\n\tAttack");
+	print("\n\tDodge");
+
+	function processInput(input){
+
+		if (input.toLowerCase() === "attack") {
+
+			print("\nYou strike the Guardian with your weapons!");
+			print("\nThe Zombie Head glows with dark energy.");
+			print("\nTHe Guardian collapses!");
+
+			print("\nYOU HAVE DEFEATED THE MUSEUM GUARDIAN!");
+			print("\nYOu are the champion of SkyCraft!");
+
+			gameActive = false;
+
+		} else if (input.toLowerCase() === "dodge") {
+
+			print("\nYou dodge the Guardian's attack...");
+			print("\nBut it strikes you from behind!");
+
+			waitThenCall(killUser);
+
+		} else {
+
+			stayHere();
+			waitThenCall(BossFight);
+
+		}
+	}
+	waitForInput(processInput);
+}
+
 start();
