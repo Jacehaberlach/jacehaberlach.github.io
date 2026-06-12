@@ -1,24 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Jace's Portfolio</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16 32x32">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            background-color: grey;
-        }
-    </style>
-    <script src="js/validate.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jace's Portfolio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16 32x32">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<p>Welcome to my personal portfolio website! My Name Is Jace Haberlach</p>
-	<img src="PhotoOfMyselfforPortfolioWBPG.png">
+  <header class="site-header">
+    <div class="brand">Jace Haberlach</div>
+    <nav class="nav">
+      <a class="nav-link nav-link--active" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="projects.html">Projects</a>
+    </nav>
+  </header>
 
-	<div class="card">
+  <main class="page">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h1>Portfolio</h1>
+        <p class="lead">
+          A clean place to learn about me and explore the projects I built this school year.
+        </p>
+        <a class="btn" href="projects.html">See Projects</a>
+      </div>
+    </section>
 
+    <section class="grid">
+      <article class="card card--hero">
+        <div class="card-media">
+          <img class="avatar" src="PhotoOfMyselfforPortfolioWBPG.png" alt="Photo of Jace" />
+        </div>
+        <div class="card-body">
+          <h2>About Me</h2>
+          <p>
+            Hi! I’m Jace. I like building websites and interactive projects.
+            I’m always learning new ways to make things work better and look nicer.
+          </p>
+          <div class="project-actions">
+            <a class="btn btn--secondary" href="about.html">Read More</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--project">
+        <div class="card-media card-media--16x9">
+          <div class="placeholder-img" style="background-image: url('practice/image.html/Inventers_Picture.png');"></div>
+        </div>
+        <div class="card-body">
+          <h2>Self Portrait Project</h2>
+          <p>
+            A canvas-based self portrait. I practiced drawing shapes and using JavaScript to render details.
+          </p>
+          <div class="project-actions">
+            <a class="btn" href="projects/portrait/index.html">View</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--project">
+        <div class="card-media card-media--16x9">
+          <div class="placeholder-img" style="background-image: url('practice/image.html/topchef_image.png');"></div>
+        </div>
+        <div class="card-body">
+          <h2>SkyCraft (Game Project)</h2>
+          <p>
+            A fun terminal-style game with a gameplay loop written in JavaScript.
+          </p>
+          <div class="project-actions">
+            <a class="btn" href="projects/game/index.html">Play</a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Jace Haberlach</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
 
 
 //Write the first card with an about me section with the Photo of myself.

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Jace Haberlach</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16 32x32">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">Jace Haberlach</div>
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link nav-link--active" href="about.html">About</a>
+      <a class="nav-link" href="projects.html">Projects</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="card card--hero">
+      <div class="card-media">
+        <img class="avatar" src="PhotoOfMyselfforPortfolioWBPG.png" alt="Photo of Jace" />
+      </div>
+      <div class="card-body">
+        <h1>About Me</h1>
+        <p class="lead">
+          Hi! I’m Jace Haberlach. I’m a student who enjoys building cool things—games, websites, and other projects.
+          This portfolio is a place to show what I’ve been learning and creating.
+        </p>
+
+        <div class="chips" aria-label="Highlights">
+          <span class="chip">Web Design</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Games</span>
+          <span class="chip">Problem Solving</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What I’m working on</h2>
+      <ul class="list">
+        <li>Improving my layout + styling skills</li>
+        <li>Building interactive projects</li>
+        <li>Learning better structure for webpages</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Jace Haberlach</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

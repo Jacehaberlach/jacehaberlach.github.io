@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Jace Haberlach</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16 32x32">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">Jace Haberlach</div>
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link nav-link--active" href="projects.html">Projects</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1 class="section-title">Projects This School Year</h1>
+
+    <section class="grid">
+      <!-- Project 1 -->
+      <article class="card card--project">
+        <div class="card-media card-media--16x9">
+          <img
+            src="projects/portrait/index.html"
+            alt="Portrait project"
+            style="display:none;"
+          />
+          <!-- We cannot embed the other page directly as an image, so use an existing project image if present.
+               If none exists, the placeholder background still looks good. -->
+          <div class="placeholder-img" style="background-image: url('practice/image.html/Inventers_Picture.png');"></div>
+        </div>
+        <div class="card-body">
+          <h2>Self Portrait Project</h2>
+          <p>
+            I built a self-portrait using an HTML canvas. It helped me learn drawing shapes and using JavaScript to render details.
+          </p>
+          <div class="project-actions">
+            <a class="btn" href="projects/portrait/index.html">View Project</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="card card--project">
+        <div class="card-media card-media--16x9">
+          <div class="placeholder-img" style="background-image: url('projects/game/DirectoryMap.svg');"></div>
+        </div>
+        <div class="card-body">
+          <h2>SkyCraft (Game Project)</h2>
+          <p>
+            I created a fun terminal-style game called SkyCraft. It uses JavaScript for the gameplay loop.
+          </p>
+          <div class="project-actions">
+            <a class="btn" href="projects/game/index.html">Play / View</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Extra: links to journal (existing folder) -->
+      <article class="card">
+        <h2>Journal</h2>
+        <p>
+          Want to see updates and notes? Open one of the journal pages below.
+        </p>
+        <div class="project-actions" style="flex-direction:column; align-items:flex-start; gap:10px;">
+          <a class="link" href="journal/exam_prep.md">Exam Prep Notes</a>
+          <a class="link" href="journal/tcpip.md">TCP/IP Notes</a>
+          <a class="link" href="journal/colors.md">Colors</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Jace Haberlach</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
